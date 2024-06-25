@@ -22,8 +22,8 @@ export const metadata: Metadata = {
       signOgImageUrl({
         title: config.blog.name,
       }),
-    ]
-  }
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -39,13 +39,8 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <main>{children}</main>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
         </ThemeProvider>
       </body>
     </html>

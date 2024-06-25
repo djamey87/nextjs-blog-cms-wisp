@@ -13,12 +13,14 @@ const Page = async ({
   const result = await wisp.getPosts({ limit: 6, page });
 
   return (
-    <div className="container mx-auto px-5 mb-10">
+    <div className="container mx-auto px-5 mb-10 flex flex-col">
       <Header />
-      <BlogPostsPreview posts={result.posts} />
-      {result.pagination.totalPages === 1 ? null : (
-        <BlogPostsPagination pagination={result.pagination} />
-      )}
+      <main>
+        <BlogPostsPreview posts={result.posts} />
+        {result.pagination.totalPages === 1 ? null : (
+          <BlogPostsPagination pagination={result.pagination} />
+        )}
+      </main>
       <Footer />
     </div>
   );
