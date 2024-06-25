@@ -12,6 +12,7 @@ import { Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FunctionComponent } from "react";
+import { DarkModeToggle } from "./DarkModeToggle";
 interface MenuItem {
   name: string;
   href: string;
@@ -76,11 +77,12 @@ export const Header: FunctionComponent = () => {
   return (
     <section className="flex items-center justify-between mt-8 md:mt-16 mb-12">
       <Link href="/">
-        <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight">
+        <h1 className="text-4xl md:text-2xl font-bold tracking-tighter leading-tight">
           {config.blog.name}
         </h1>
       </Link>
-      <Navigation />
+      <DarkModeToggle />
+      {/* <Navigation /> */}
     </section>
   );
 };
