@@ -9,6 +9,7 @@ import { FunctionComponent } from "react";
 export const BlogPostPreview: FunctionComponent<{
   post: GetPostsResult["posts"][0];
 }> = ({ post }) => {
+  console.log("testing", JSON.stringify(post));
   return (
     <div className="break-words">
       <Link href={`/blog/${post.slug}`}>

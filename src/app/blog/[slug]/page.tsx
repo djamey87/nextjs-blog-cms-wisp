@@ -20,6 +20,7 @@ export async function generateMetadata({
   }
 
   const { title, description, image } = result.post;
+  console.log("blog image", image);
   const generatedOgImage = signOgImageUrl({ title, brand: config.blog.name });
 
   return {
