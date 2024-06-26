@@ -10,6 +10,7 @@ import { config } from "@/config";
 import { cn } from "@/lib/utils";
 import { Menu } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { FunctionComponent } from "react";
 import { DarkModeToggle } from "./DarkModeToggle";
@@ -77,7 +78,23 @@ export const Header: FunctionComponent = () => {
   return (
     <section className="flex items-center justify-between mt-8 md:mt-16 mb-12">
       <Link href="/">
-        <h1 className="text-4xl md:text-3xl font-merri">{config.blog.name}</h1>
+        <div className="flex flex-row">
+          <div className="relative mr-4">
+            <Image
+              alt="Author photo"
+              width="60"
+              height="60"
+              src={"/images/avatar.png"}
+            />
+          </div>
+
+          <div>
+            <h1 className="text-4xl md:text-3xl font-merri">
+              {config.blog.name}
+            </h1>
+            <h3 className="font-merri">Senior product engineer</h3>
+          </div>
+        </div>
       </Link>
       <DarkModeToggle />
       {/* <Navigation /> */}

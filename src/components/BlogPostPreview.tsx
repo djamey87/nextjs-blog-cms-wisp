@@ -25,7 +25,7 @@ export const BlogPostPreview: FunctionComponent<{
           </div>
           <CardContent className="pb-0">
             <div className="grid grid-cols-1 gap-2 md:col-span-2 my-2">
-              <p className="prose text-xs lg:prose-lg text-muted-foreground">
+              <p className="text-xs text-muted-foreground">
                 {formatDate(post.publishedAt || post.updatedAt, "dd MMMM yyyy")}
               </p>
               <h4 className="font-sans font-semibold text-primary">
@@ -60,7 +60,7 @@ export const BlogPostsPreview: FunctionComponent<{
   return (
     <div
       className={cn(
-        "grid grid-cols-1 gap-8 lg:gap-16 md:grid-cols-4 md:my-16 my-8",
+        "grid grid-cols-1 gap-8 md:grid-cols-3 place-content-around",
         className
       )}
     >
