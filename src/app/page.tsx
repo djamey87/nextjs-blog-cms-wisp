@@ -2,6 +2,7 @@ import { BlogPostsPreview } from "@/components/BlogPostPreview";
 import { BlogPostsPagination } from "@/components/BlogPostsPagination";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { SocialLinks } from "@/components/SocialLinks";
 import { wisp } from "@/lib/wisp";
 import { Linkedin, Github, Mail } from "lucide-react";
 
@@ -35,25 +36,7 @@ const Page = async ({
         </p>
 
         {/* social links */}
-        <div className="flex flex-row justify-center mt-4">
-          <ul className="float-left">
-            <li className="float-left hover:bg-accent p-2 rounded-md">
-              <a href="https://www.linkedin.com/in/djamey87/" target="_blank">
-                <Linkedin size="36" />
-              </a>
-            </li>
-            <li className="float-left ml-4 hover:bg-accent p-2 rounded-md">
-              <a href="https://github.com/djamey87" target="blank">
-                <Github size="36" />
-              </a>
-            </li>
-            <li className="float-left ml-4 hover:bg-accent p-2 rounded-md">
-              <a href="mailto:djamey87+hello@gmail.com?subject=Hello%20Dave">
-                <Mail size="36" />
-              </a>
-            </li>
-          </ul>
-        </div>
+        <SocialLinks />
 
         <h2 className="font-merri mt-16 mb-4">{`More words 📖`}</h2>
 
