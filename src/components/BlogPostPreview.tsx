@@ -11,7 +11,6 @@ import { badgeVariants } from "@/components/ui/badge";
 export const BlogPostPreview: FunctionComponent<{
   post: GetPostsResult["posts"][0];
 }> = ({ post }) => {
-  console.log("testing", JSON.stringify(post));
   return (
     <div>
       <Link href={`/blog/${post.slug}`}>
@@ -34,23 +33,22 @@ export const BlogPostPreview: FunctionComponent<{
               </h4>
             </div>
           </CardContent>
-          {/* <CardFooter>
-          
-        </CardFooter> */}
         </Card>
       </Link>
-      <div className="text-sm text-muted-foreground mt-4">
-        {post.tags.map((tag) => (
-          <div key={tag.id} className="mr-2 inline-block">
-            <Link
-              className={badgeVariants({ variant: "secondary" })}
-              href={`/tag/${tag.name}`}
-            >
-              #{tag.name}
-            </Link>
-          </div>
-        ))}
-      </div>
+      {post.tags.length === 0 ? null : (
+        <div className="text-sm text-muted-foreground mt-4">
+          {post.tags.map((tag) => (
+            <div key={tag.id} className="mr-2 inline-block">
+              <Link
+                className={badgeVariants({ variant: "secondary" })}
+                href={`/tag/${tag.name}`}
+              >
+                #{tag.name}
+              </Link>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
