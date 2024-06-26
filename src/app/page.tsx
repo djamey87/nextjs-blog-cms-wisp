@@ -14,7 +14,7 @@ const Page = async ({
   const result = await wisp.getPosts({ limit: 6, page });
 
   return (
-    <div className="container mx-auto px-5 mb-10 flex flex-col">
+    <div className="container mx-auto px-5 min-h-screen flex flex-col justify-between">
       <Header />
       <main>
         <BlogPostsPreview posts={result.posts} />
