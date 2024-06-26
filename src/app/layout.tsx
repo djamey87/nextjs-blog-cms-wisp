@@ -3,10 +3,19 @@ import { config } from "@/config";
 import { signOgImageUrl } from "@/lib/og-image";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Merriweather, Oxygen } from "next/font/google";
 import "./globals.css";
 
-const fontSans = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const fontSans = Oxygen({
+  subsets: ["latin"],
+  weight: "300",
+  variable: "--font-sans",
+});
+const fontMerri = Merriweather({
+  subsets: ["latin"],
+  weight: "900",
+  variable: "--font-merri",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -36,7 +45,8 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased max-w-6xl m-auto",
-          fontSans.variable
+          fontSans.variable,
+          fontMerri.variable
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

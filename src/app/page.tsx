@@ -10,6 +10,7 @@ const Page = async ({
   searchParams: { [key: string]: string | string[] | undefined };
 }) => {
   const page = searchParams.page ? parseInt(searchParams.page as string) : 1;
+  // TODO: limit is obsolete atm, this needs review
   const result = await wisp.getPosts({ limit: 6, page });
 
   return (
