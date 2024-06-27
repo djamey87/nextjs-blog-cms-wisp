@@ -78,21 +78,19 @@ export const Header: FunctionComponent = () => {
   return (
     <section className="flex items-center justify-between mt-8 md:mt-16 mb-12">
       <Link href="/">
-        <div className="flex flex-row">
+        <div className="flex flex-row items-center">
           <div className="relative mr-4">
             <Image
               alt="Author photo"
-              width="60"
-              height="60"
+              width="40"
+              height="40"
               src={"/images/avatar.png"}
             />
           </div>
 
-          <div>
-            <h1 className="text-4xl md:text-3xl font-merri">
-              {config.blog.name}
-            </h1>
-            <h3 className="font-merri">Senior product engineer</h3>
+          <div className="leading-tight">
+            <h3 className="font-bold">{config.blog.name}</h3>
+            <p>Senior product engineer</p>
           </div>
         </div>
       </Link>

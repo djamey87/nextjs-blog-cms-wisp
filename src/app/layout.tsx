@@ -8,7 +8,7 @@ import "./globals.css";
 
 const fontSans = Oxygen({
   subsets: ["latin"],
-  weight: "300",
+  weight: ["300", "400", "700"],
   variable: "--font-sans",
 });
 const fontMerri = Merriweather({

@@ -17,10 +17,10 @@ const Page = async ({
 
   // TODO: use a centralised layout component
   return (
-    <div className="container mx-auto px-5 min-h-screen flex flex-col justify-between">
+    <div className="container mx-auto px-5 min-h-screen flex flex-col justify-between md:max-w-prose">
       <Header />
-      <main className="md:max-w-prose mx-auto">
-        <h2 className="font-merri">Hello there! 👋</h2>
+      <main className="">
+        <h1 className="font-bold">Hello there! 👋</h1>
 
         <p className="mt-4">{`I'm Dave, an engineer now 14 years into the game (😬), remaining passioniate for blending optimal functionality and seamless design into mobile and web based applications.`}</p>
 
@@ -29,16 +29,13 @@ const Page = async ({
           optimisation and bringing a touch of character to everything I build.
         </p>
 
-        <h2 className="font-merri mt-16">{`Let's connect! 🤝`}</h2>
-        <p className="mt-4">
-          We can build something great! Or simply say words at each other, I am
-          happy with either.
+        <p className="mt-4 mb-6">
+          {`Let's build something great together! or simply say words at each other`}
         </p>
-
-        {/* social links */}
         <SocialLinks />
 
-        <h2 className="font-merri mt-16 mb-4">{`More words 📖`}</h2>
+        <h2 className="font-bold mt-16 mb-4">{`More words`}</h2>
+        <p className="mt-4 mb-6">Some more words</p>
 
         <BlogPostsPreview posts={result.posts} />
         {result.pagination.totalPages === 1 ? null : (
