@@ -13,7 +13,7 @@ export const SocialLinks = ({ variant = "body" }: Props) => {
             href="mailto:djamey87+hello@gmail.com?subject=Hello%20Dave"
             className={`flex items-center hover:bg-accent ${
               variant === "body"
-                ? "bg-primary text-white hover:bg-primary/80 pl-2 pr-4"
+                ? "bg-primary text-background hover:bg-primary/90 pl-2 pr-4"
                 : "px-3"
             } py-2 rounded-lg shadow-md dark:ring-accent dark:ring-2`}
           >
