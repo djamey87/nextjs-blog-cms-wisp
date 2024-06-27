@@ -13,42 +13,42 @@ export const BlogPostPreview: FunctionComponent<{
 }> = ({ post }) => {
   return (
     <div>
-      <Link href={`/blog/${post.slug}`}>
-        <Card className="overflow-hidden hover:ring-2">
-          <div className="aspect-[3/4] relative">
-            <Image
-              alt={post.title}
-              className="object-cover"
-              src={post.image || "/images/placeholder.webp"}
-              fill
-            />
-          </div>
-          <CardContent className="pb-0">
-            <div className="grid grid-cols-1 gap-2 md:col-span-2 my-2">
-              <p className="text-xs text-muted-foreground">
-                {formatDate(post.publishedAt || post.updatedAt, "dd MMMM yyyy")}
-              </p>
-              <h4 className="font-sans font-semibold text-primary">
-                {post.title}
-              </h4>
-            </div>
-          </CardContent>
-        </Card>
-      </Link>
-      {post.tags.length === 0 ? null : (
-        <div className="text-sm text-muted-foreground mt-4">
-          {post.tags.map((tag) => (
-            <div key={tag.id} className="mr-2 inline-block">
-              <Link
-                className={badgeVariants({ variant: "secondary" })}
-                href={`/tag/${tag.name}`}
-              >
-                #{tag.name}
-              </Link>
-            </div>
-          ))}
+      <Card className="overflow-hidden relative">
+        <div className="aspect-[3/4]">
+          <Image
+            alt={post.title}
+            className="object-cover"
+            src={post.image || "/images/placeholder.webp"}
+            fill
+          />
         </div>
-      )}
+        <div className="absolute top-0 p-2">
+          {post.tags.length === 0 ? null : (
+            <div className="text-sm text-muted-foreground">
+              {post.tags.map((tag) => (
+                <div key={tag.id} className="mr-2 inline-block">
+                  <Link
+                    className={`${badgeVariants({
+                      variant: "default",
+                    })} opacity-70`}
+                    href={`/tag/${tag.name}`}
+                  >
+                    {tag.name}
+                  </Link>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </Card>
+      <Link href={`/blog/${post.slug}`} className="hover:underline">
+        <div className="grid grid-cols-1 gap-2 md:col-span-2 my-2">
+          <p className="text-xs text-muted-foreground">
+            {formatDate(post.publishedAt || post.updatedAt, "dd MMMM yyyy")}
+          </p>
+          <h4 className="font-sans font-semibold text-primary">{post.title}</h4>
+        </div>
+      </Link>
     </div>
   );
 };

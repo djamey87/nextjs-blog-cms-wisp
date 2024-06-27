@@ -32,7 +32,7 @@ const Page = async ({
       <SocialLinks />
 
       <h2 className="font-bold mt-16 mb-4">{`More words`}</h2>
-      <p className="mt-4 mb-6">Some more words</p>
+      {/* <p className="mt-4 mb-6">Some more words</p> */}
 
       <BlogPostsPreview posts={result.posts} />
       {result.pagination.totalPages === 1 ? null : (
