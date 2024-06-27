@@ -15,11 +15,7 @@ const Page = async ({
   // TODO: limit is obsolete atm, this needs review
   const result = await wisp.getPosts({ limit: 6, page });
 
-  // TODO: use a centralised layout component
   return (
-    // <div className="container mx-auto px-5 min-h-screen flex flex-col justify-between md:max-w-prose">
-    //   <Header />
-    //   <main>
     <>
       <h1 className="font-bold">Hello there! 👋</h1>
 
@@ -43,9 +39,6 @@ const Page = async ({
         <BlogPostsPagination pagination={result.pagination} />
       )}
     </>
-    //   </main>
-    //   <Footer />
-    // </div>
   );
 };
 
