@@ -5,6 +5,8 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Merriweather, Oxygen } from "next/font/google";
 import "./globals.css";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 const fontSans = Oxygen({
   subsets: ["latin"],
@@ -50,7 +52,11 @@ export default function RootLayout({
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
+          <div className="container mx-auto px-5 min-h-screen flex flex-col justify-between md:max-w-prose">
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>

@@ -11,7 +11,7 @@ export const SocialLinks = ({ variant = "body" }: Props) => {
         <li
           className={`float-left hover:bg-accent ${
             variant === "body" ? "pl-2 pr-4" : "px-3"
-          } py-2 rounded-lg shadow-md`}
+          } py-2 rounded-lg shadow-md dark:ring-accent dark:ring-2`}
         >
           <a
             href="mailto:djamey87+hello@gmail.com?subject=Hello%20Dave"
@@ -23,12 +23,12 @@ export const SocialLinks = ({ variant = "body" }: Props) => {
             )}
           </a>
         </li>
-        <li className="float-left hover:bg-accent py-2 px-3 rounded-lg shadow-md ml-4">
+        <li className="float-left hover:bg-accent py-2 px-3 rounded-lg shadow-md ml-4 dark:ring-accent dark:ring-2">
           <a href="https://www.linkedin.com/in/djamey87/" target="_blank">
             <Linkedin size="18" />
           </a>
         </li>
-        <li className="float-left ml-4 hover:bg-accent py-2 px-3 rounded-lg shadow-md">
+        <li className="float-left ml-4 hover:bg-accent py-2 px-3 rounded-lg shadow-md dark:ring-accent dark:ring-2">
           <a href="https://github.com/djamey87" target="blank">
             <Github size="18" />
           </a>
