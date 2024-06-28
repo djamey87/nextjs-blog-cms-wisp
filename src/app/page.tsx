@@ -69,7 +69,7 @@ const Page = async ({
         <li>Nginx</li>
         <li>Figma</li>
       </ul>
-      <p className="italic mt-2">
+      <p className="italic mt-2 text-muted-foreground text-xs">
         This is not an exclusive list, as trends and environments change so too
         does this list.
       </p>
