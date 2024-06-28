@@ -27,17 +27,77 @@ const Page = async ({
       </p>
 
       <p className="mt-4 mb-6">
-        {`Let's build something great together! or simply say words at each other`}
+        {`Let's build something great together! or simply say words at each other.`}
       </p>
       <SocialLinks />
 
-      <h2 className="font-bold mt-16 mb-4">{`More words`}</h2>
-      {/* <p className="mt-4 mb-6">Some more words</p> */}
+      <h2 className="font-bold mt-16 mb-4">{`Tech that I work with`}</h2>
+      <ul className="inline-list">
+        <li>Typescript</li>
+        <li>Javascript</li>
+        <li>React</li>
+        <li>React Native</li>
+        <li>Node.js</li>
+        <li>Next.js</li>
+        <li>Remix</li>
+        <li>Express</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Tailwind</li>
+        <li>Shadcn</li>
+        <li>C#</li>
+        <li>Python</li>
+        <li>Bun</li>
+        <li>SQL</li>
+        <li>PostgreSQL</li>
+        <li>MongoDB</li>
+        <li>Mongoose</li>
+        <li>AWS</li>
+        <li>Azure</li>
+        <li>Vercel</li>
+        <li>Expo EAS</li>
+        <li>DigitalOcean</li>
+        <li>Docker</li>
+        <li>Appium</li>
+        <li>Detox</li>
+        <li>Cypress</li>
+        <li>Jest</li>
+        <li>Storybook</li>
+        <li>Puppeteer</li>
+        <li>Electron</li>
+        <li>Redis</li>
+        <li>Nginx</li>
+        <li>Figma</li>
+      </ul>
+      <p className="italic mt-2">
+        This is not an exclusive list, as trends and environments change so too
+        does this list.
+      </p>
+
+      <h2 className="font-bold mt-16 mb-4">{`Companies I have worked with`}</h2>
+      <ul className="inline-list">
+        <li>Ministry of Defence</li>
+        <li>Intel</li>
+        <li>Sony</li>
+        <li>Sonos</li>
+        <li>John Lewis</li>
+        <li>Microsoft</li>
+        <li>Currys PC World</li>
+        <li>Cambridge University</li>
+        <li>Gov.uk</li>
+        <li>AXA</li>
+        <li>Simplyhealth</li>
+        <li>Vinehealth</li>
+      </ul>
+
+      {/* TODO: comment out until you have content Dave... */}
+      {/* <h2 className="font-bold mt-16 mb-4">{`More words`}</h2>
+      <p className="mt-4 mb-6">Some more words</p>
 
       <BlogPostsPreview posts={result.posts} />
       {result.pagination.totalPages === 1 ? null : (
         <BlogPostsPagination pagination={result.pagination} />
-      )}
+      )} */}
     </>
   );
 };

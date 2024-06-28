@@ -96,3 +96,13 @@
     @apply text-lg;
   }
 }
+
+@layer base {
+  ul.inline-list {
+    @apply flex flex-row flex-wrap;
+    @apply list-disc;
+  }
+  ul.inline-list > li {
+    @apply ml-8;
+  }
+}

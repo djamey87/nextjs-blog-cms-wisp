@@ -14,7 +14,7 @@ export const BlogPostPreview: FunctionComponent<{
   return (
     <div>
       <Card className="overflow-hidden relative">
-        <div className="aspect-[3/4]">
+        <div className="aspect-[2/1] md:aspect-[3/4]">
           <Image
             alt={post.title}
             className="object-cover"
