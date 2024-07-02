@@ -4,7 +4,7 @@ This is a fork off one of the great [next.js templates](https://github.com/Wisp-
 
 ## Features
 
-- Beautiful blog starter kit with server rendering using Next.js 14 Server Components
+- A minimalist blog starter kit with server rendering using Next.js 14 Server Components
 - Responsive layout for mobile devices
 - Filter blog posts by tags
 - About page
