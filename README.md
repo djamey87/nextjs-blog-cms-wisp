@@ -30,3 +30,11 @@ This is a fork off one of the great [next.js templates](https://github.com/Wisp-
 4. Add your "blog id" (from step 2) to the .env var `NEXT_PUBLIC_BLOG_ID`
 5. Run the development server `npm run dev` | `yarn dev` | `pnpm dev` | `bun dev`
 6. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Deployment
+
+I highly recommend deploying this with [Vercel](https://vercel.com) which keeps things nice and simple.
+
+## Notes
+
+I am using the anlaytics package from vercel for a simple way of tracking page views, you may need to remove this if you are going with a different hosting service.
