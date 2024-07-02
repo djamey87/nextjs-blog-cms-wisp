@@ -1,10 +1,9 @@
-import { BlogPostsPreview } from "@/components/BlogPostPreview";
-import { BlogPostsPagination } from "@/components/BlogPostsPagination";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
+import Link from "next/link";
+// import { BlogPostsPreview } from "@/components/BlogPostPreview";
+// import { BlogPostsPagination } from "@/components/BlogPostsPagination";
 import { SocialLinks } from "@/components/SocialLinks";
 import { wisp } from "@/lib/wisp";
-import { Linkedin, Github, Mail } from "lucide-react";
+import { Mail, ArrowRight } from "lucide-react";
 
 const Page = async ({
   searchParams,
@@ -17,7 +16,17 @@ const Page = async ({
 
   return (
     <>
-      <h1 className="font-bold">Hello there! 👋</h1>
+      <div className="flex flex-row justify-between">
+        <h1 className="font-bold">Hello there! 👋</h1>
+
+        <Link
+          href="/about"
+          className={`flex items-center hover:bg-accent py-2 rounded-lg shadow-md dark:ring-accent dark:ring-2 px-3`}
+        >
+          <span className="mr-2 leading-tight">More</span>
+          <ArrowRight size="18" />
+        </Link>
+      </div>
 
       <p className="mt-4">{`I'm Dave, an engineer now 14 years into the game (😬), remaining passioniate for blending optimal functionality and seamless design into mobile and web based applications.`}</p>
 

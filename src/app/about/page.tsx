@@ -6,36 +6,52 @@ import Markdown from "react-markdown";
 
 const content = `# About Me
 
-![Samantha](https://imagedelivery.net/lLmNeOP7HXG0OqaG97wimw/clvlugru90000o4g8ahxp069s/db7abbe3-aa5c-433e-a16d-cbf137d1c9e5.png/public)
+I'm Dave, an engineer now 14 years into the game (😬), remaining passioniate for blending optimal functionality and seamless design into mobile and web based applications.
 
-Hey there! I'm Samantha, a 28-year-old former corporate warrior who decided to ditch the 9-to-5 grind and embark on an adventure of a lifetime. After years of hustling in a high-pressure job, I realized that life is too short to be stuck in an office, staring at spreadsheets all day.
+Based in the UK I enjoy clean code, innovative tech, process optimisation and bringing a touch of character to everything I build.
 
-So I took a leap of faith, quit my cushy job in Singapore, and decided to see the world on my own terms. No more stuffy meetings or rigid schedules – just me, my backpack, and an open road ahead.
+## My Journey
 
-![Samantha](https://imagedelivery.net/lLmNeOP7HXG0OqaG97wimw/clvlugru90000o4g8ahxp069s/6b080e65-2329-4a36-ad5c-0a6af8d9aeb1.png/public)
+I started out in design before moving to software engineering, and throughout all the roles since I have managed to cling on to small elements of design.
 
-This blog is where I'll be documenting my travels, sharing my experiences, and hopefully inspiring others to follow their wanderlust. From trekking through remote villages to savoring local cuisines, I'm on a mission to immerse myself in different cultures and create memories that will last a lifetime.
+My engineering experience began in the days when Adobe Flash and Actionscript were king of the internet, which was great fun and allowed me to apply design and animation skills alongside coding abilities, and it all started with an AS3 bootcamp.
+I initially worked through agencies and consultancy firms which gave me some great exposure to many different types of clients and products.
 
-But this journey isn't just about checking off destinations from a bucket list. It's about self-discovery, personal growth, and finding the courage to live life on my own terms. I'll be honest and raw, sharing the highs and lows, the moments of pure bliss and the inevitable challenges that come with solo travel.
+As an avid reader of "smashing magazine", ".net" and other popular magazines at the time, curiosity and excitement grew for the capabilities nodejs (and javascript generally) and as soon as I dipped my toe into these waters the rest was history.
+I used gulp.js to automate everything (building rudimentary CI/CD pipelines before I knew it was a thing), nw.js to build all the applications I could and ionic with cordova (way back when) for very early stage mobile apps.
 
-So join me on this adventure, and let's explore the world together! Who knows, maybe my stories will inspire you to take that leap of faith and pursue your own dreams, whatever they may be.
+I navigated my way through companies gravitating toward product focused companines to focus on specific domains.
 
-Let's go on an adventure!
+As I have progressed, engineering has become less of an all-encompassing focus for me and more of a tool I can wield to achieve a goal. It sits comfortably alongside design, leadership, communication, organisation and other skill sets I have acquired (and continue to).
 
-Love,
 
-Samantha`;
+## What I Do
+Areas I cover while onboard:
+
+- Full-Stack development
+- Systems architecture
+- Mobile engineering
+- Proof of Concept development
+- Low fidelity design
+- Prototyping
+- Mobbing / pair programming facilitation
+- Mentoring
+- 1:1's
+- Communication and lifecycle processes
+- Stakeholder management
+- Product ownership
+`;
 
 export async function generateMetadata() {
   return {
     title: "About Me",
-    description: "Learn more about Samantha and her travel adventures",
+    description: "Learn more about Dave",
     openGraph: {
       title: "About Me",
-      description: "Learn more about Samantha and her travel adventures",
+      description: "Learn more about Dave",
       images: [
         signOgImageUrl({
-          title: "Samantha",
+          title: "Dave",
           label: "About Me",
           brand: config.blog.name,
         }),
@@ -46,12 +62,8 @@ export async function generateMetadata() {
 
 const Page = async () => {
   return (
-    <div className="container mx-auto px-5">
-      <Header />
-      <div className="prose lg:prose-lg dark:prose-invert m-auto mt-20 mb-10 blog-content">
-        <Markdown>{content}</Markdown>
-      </div>
-      <Footer />
+    <div className="prose dark:prose-invert blog-content">
+      <Markdown>{content}</Markdown>
     </div>
   );
 };

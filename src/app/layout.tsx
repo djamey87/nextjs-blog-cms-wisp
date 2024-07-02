@@ -55,7 +55,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="container mx-auto px-5 min-h-screen flex flex-col justify-between md:max-w-prose">
             <Header />
-            <main>{children}</main>
+            <main className="my-20">{children}</main>
             <Footer />
           </div>
         </ThemeProvider>
