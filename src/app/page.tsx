@@ -3,7 +3,7 @@ import Link from "next/link";
 // import { BlogPostsPagination } from "@/components/BlogPostsPagination";
 import { SocialLinks } from "@/components/SocialLinks";
 import { wisp } from "@/lib/wisp";
-import { Mail, ArrowRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 const Page = async ({
   searchParams,
@@ -23,8 +23,8 @@ const Page = async ({
           href="/about"
           className={`flex items-center hover:bg-accent py-2 rounded-lg shadow-md dark:ring-accent dark:ring-2 px-3`}
         >
-          <span className="mr-2 leading-tight">More</span>
-          <ArrowRight size="18" />
+          <span className="mr-2 leading-tight">About me</span>
+          <ChevronRight size="18" />
         </Link>
       </div>
 
