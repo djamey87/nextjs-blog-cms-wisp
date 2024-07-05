@@ -17,7 +17,7 @@ I started out in design before moving to software engineering, and throughout al
 My engineering experience began in the days when Adobe Flash and Actionscript were king of the internet, which was great fun and allowed me to apply design and animation skills alongside coding abilities, and it all started with an AS3 bootcamp.
 I initially worked through agencies and consultancy firms which gave me some great exposure to many different types of clients and products.
 
-As an avid reader of "smashing magazine", ".net" and other popular magazines at the time, curiosity and excitement grew for the capabilities nodejs (and javascript generally) and as soon as I dipped my toe into these waters the rest was history.
+As an avid reader of "smashing magazine", ".net" and other popular magazines at the time, curiosity and excitement grew for the capabilities of node.js (and javascript generally) and as soon as I dipped my toe into these waters the rest was history.
 I used gulp.js to automate everything (building rudimentary CI/CD pipelines before I knew it was a thing), nw.js to build all the applications I could and ionic with cordova (way back when) for very early stage mobile apps.
 
 I navigated my way through companies gravitating toward product focused companines to focus on specific domains.
